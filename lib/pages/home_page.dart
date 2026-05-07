@@ -245,13 +245,13 @@ class _HomePageState extends State<HomePage> {
                               ),
                         ),
                         const SizedBox(height: 8),
-                        Text(
-                          'Foto disimpan di penyimpanan cache lokal',
-                          style:
-                              Theme.of(context).textTheme.bodySmall?.copyWith(
-                                    color: Colors.grey[500],
-                                  ),
-                        ),
+                        // Text(
+                        //   'Foto disimpan di penyimpanan cache lokal',
+                        //   style:
+                        //       Theme.of(context).textTheme.bodySmall?.copyWith(
+                        //             color: Colors.grey[500],
+                        //           ),
+                        // ),
                       ],
                     ),
                   ),
@@ -259,57 +259,57 @@ class _HomePageState extends State<HomePage> {
                   const SizedBox(height: 24),
 
                   // Info Section
-                  Container(
-                    padding: const EdgeInsets.all(16),
-                    decoration: BoxDecoration(
-                      color: Colors.blue[50],
-                      borderRadius: BorderRadius.circular(16),
-                      border: Border.all(
-                        color: Colors.blue.withOpacity(0.3),
-                      ),
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          children: [
-                            const Icon(
-                              Icons.info_outline,
-                              color: Colors.blue,
-                              size: 24,
-                            ),
-                            const SizedBox(width: 12),
-                            Text(
-                              'Informasi',
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .titleSmall
-                                  ?.copyWith(
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.blue,
-                                  ),
-                            ),
-                          ],
-                        ),
-                        const SizedBox(height: 12),
-                        Text(
-                          'Format nama file: [Kategori]_[Tanggal-Jam]',
-                          style: Theme.of(context).textTheme.bodySmall,
-                        ),
-                        const SizedBox(height: 8),
-                        Text(
-                          'Contoh: Depan_2024-12-20-14-30-45.jpg',
-                          style: Theme.of(context)
-                              .textTheme
-                              .bodySmall
-                              ?.copyWith(
-                                fontStyle: FontStyle.italic,
-                                color: Colors.grey[600],
-                              ),
-                        ),
-                      ],
-                    ),
-                  ),
+                  // Container(
+                  //   padding: const EdgeInsets.all(16),
+                  //   decoration: BoxDecoration(
+                  //     color: Colors.blue[50],
+                  //     borderRadius: BorderRadius.circular(16),
+                  //     border: Border.all(
+                  //       color: Colors.blue.withOpacity(0.3),
+                  //     ),
+                  //   ),
+                  //   child: Column(
+                  //     crossAxisAlignment: CrossAxisAlignment.start,
+                  //     children: [
+                  //       Row(
+                  //         children: [
+                  //           const Icon(
+                  //             Icons.info_outline,
+                  //             color: Colors.blue,
+                  //             size: 24,
+                  //           ),
+                  //           const SizedBox(width: 12),
+                  //           Text(
+                  //             'Informasi',
+                  //             style: Theme.of(context)
+                  //                 .textTheme
+                  //                 .titleSmall
+                  //                 ?.copyWith(
+                  //                   fontWeight: FontWeight.bold,
+                  //                   color: Colors.blue,
+                  //                 ),
+                  //           ),
+                  //         ],
+                  //       ),
+                  //       const SizedBox(height: 12),
+                  //       // Text(
+                  //       //   'Format nama file: [Kategori]_[Tanggal-Jam]',
+                  //       //   style: Theme.of(context).textTheme.bodySmall,
+                  //       // ),
+                  //       const SizedBox(height: 8),
+                  //       Text(
+                  //         'Contoh: Depan_2024-12-20-14-30-45.jpg',
+                  //         style: Theme.of(context)
+                  //             .textTheme
+                  //             .bodySmall
+                  //             ?.copyWith(
+                  //               fontStyle: FontStyle.italic,
+                  //               color: Colors.grey[600],
+                  //             ),
+                  //       ),
+                  //     ],
+                  //   ),
+                  // ),
                 ],
               ),
             ),

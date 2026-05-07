@@ -1,4 +1,6 @@
 import 'dart:io';
+import 'dart:typed_data';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import '../services/camera_service.dart';
 
@@ -114,6 +116,22 @@ class _ImagePreviewPageState extends State<ImagePreviewPage> {
     }
   }
 
+  /// Build image widget yang kompatibel dengan web dan mobile
+  Widget _buildImageWidget() {
+    if (kIsWeb) {
+      // Web tidak support File, seharusnya tidak pernah sampai sini
+      return const Center(
+        child: Text('Fitur kamera tidak tersedia di web'),
+      );
+    }
+    
+    // Untuk mobile, gunakan Image.file
+    return Image.file(
+      File(widget.imagePath),
+      fit: BoxFit.contain,
+    );
+  }
+
   /// Simpan gambar dengan kategori yang dipilih
   Future<void> _saveImageWithCategory(String category) async {
     setState(() => _isLoading = true);
@@ -182,10 +200,7 @@ class _ImagePreviewPageState extends State<ImagePreviewPage> {
               Expanded(
                 child: Container(
                   color: Colors.black,
-                  child: Image.file(
-                    File(widget.imagePath),
-                    fit: BoxFit.contain,
-                  ),
+                  child: _buildImageWidget(),
                 ),
               ),
             ],
